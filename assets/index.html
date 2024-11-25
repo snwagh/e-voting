@@ -127,11 +127,6 @@
     <div class="container">
         <h1>Choose Your Favorite Pet</h1>
 
-        <!-- <div class="public-key">
-            <h3>Public Key for Vote Encryption:</h3>
-            <pre id="public-key-display">Loading public key...</pre>
-        </div> -->
-
         <button id="cat-button" class="vote-button">🐱 Cat</button>
         <button id="dog-button" class="vote-button">🐕 Dog</button>
         <p id="result"></p>
@@ -165,12 +160,12 @@
             <div id="instructions" class="hidden">
                 <p>To participate in voting:</p>
                 <ol>
-                    <li>When you vote, a file named <code>EncryptedVote.txt</code> will be downloaded</li>
+                    <li>When you vote, a file named <code>Vote.txt</code> will be downloaded</li>
                     <li>Move this file to your SyftBox public folder:</li>
-                    <code>~/SyftBox/datasites/<your_datasite>/public/</code>
-                    <li>The vote will be automatically counted in the next update</li>
+                    <code>~/SyftBox/datasites/your_email_id/public/</code>
+                    <li>The vote will be automatically counted in the next update.</li>
                 </ol>
-                <p>The totals are updated every minute.</p>
+                <p>The totals are updated every 10 seconds.</p>
             </div>
         </div>
     </div>
