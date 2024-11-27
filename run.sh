@@ -6,7 +6,7 @@ if [ ! -d ".venv" ]; then
     uv venv -p 3.12 .venv
     echo "Virtual environment created successfully."
 
-    # uv pip install -r requirements.txt
+    uv pip install -r requirements.txt
 else
     echo "Virtual environment already exists."
 fi
