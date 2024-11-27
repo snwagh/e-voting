@@ -124,7 +124,7 @@ def count_votes(datasites_path: Path, peers: list[str], private_key) -> tuple[in
     dog_votes = 0
     
     for peer in peers:
-        vote_file = datasites_path / peer / "public" / "Vote.txt"
+        vote_file = datasites_path / peer / "public" / "vote.txt"
         
         if not vote_file.exists():
             continue
