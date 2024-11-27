@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vote</title>
+    <title>MyVote</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -304,10 +304,10 @@
             document.getElementById('cat-bar').style.width = `${catPercentage}%`;
             document.getElementById('dog-bar').style.width = `${dogPercentage}%`;
             if (catPercentage === 0) {
-                document.getElementById('cat-bar').style.paddingLeft = '10px';
+                document.getElementById('cat-bar').style.width = '2px';
             }
             if (dogPercentage === 0) {
-                document.getElementById('dog-bar').style.paddingLeft = '10px';
+                document.getElementById('dog-bar').style.width = '2%';
             }          
             document.getElementById('cat-bar').textContent = `Cats: ${totals.cats}`;
             document.getElementById('dog-bar').textContent = `Dogs: ${totals.dogs}`;
