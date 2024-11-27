@@ -9,8 +9,9 @@ from cryptography.hazmat.primitives.asymmetric.rsa import RSAPrivateKey
 from cryptography.hazmat.backends import default_backend
 import base64
 import shutil
+from loguru import logger 
 
-API_NAME = "e_voting"
+API_NAME = "e-voting"
 
 def generate_key_pair(client):
     secret_key_path = client.config.data_dir / "private" / API_NAME
@@ -22,6 +23,7 @@ def generate_key_pair(client):
     public_key_file = public_key_path / "public.json"
     # Check if both private and public key files exist
     if secret_key_file.exists() and public_key_file.exists():
+        logger.info("Loading existing keys")
         with open(secret_key_file, 'rb') as f:
             private_key = serialization.load_pem_private_key(
                 f.read(),
@@ -37,6 +39,7 @@ def generate_key_pair(client):
             )
         return private_key, public_key
     
+    logger.info("Generating new keys")
     # Generate private key
     private_key = rsa.generate_private_key(
         public_exponent=65537,

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Voting API</title>
+    <title>vote</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -61,8 +61,6 @@
             transition: width 0.3s ease;
             display: flex;
             align-items: center;
-            padding-left: 10px;
-            padding-right: -10px;
             color: white;
             font-weight: bold;
         }
@@ -305,6 +303,12 @@
 
             document.getElementById('cat-bar').style.width = `${catPercentage}%`;
             document.getElementById('dog-bar').style.width = `${dogPercentage}%`;
+            if (catPercentage === 0) {
+                document.getElementById('cat-bar').style.paddingLeft = '10px';
+            }
+            if (dogPercentage === 0) {
+                document.getElementById('dog-bar').style.paddingLeft = '10px';
+            }          
             document.getElementById('cat-bar').textContent = `Cats: ${totals.cats}`;
             document.getElementById('dog-bar').textContent = `Dogs: ${totals.dogs}`;
         }

@@ -15,7 +15,7 @@ uv pip install -U syftbox --quiet
 . .venv/bin/activate
 
 # # run app using python from venv
-echo "Running e_voting with $(python3 --version) at '$(which python3)'"
+echo "Running e-voting with $(python3 --version) at '$(which python3)'"
 python3 main.py
 
 # # deactivate the virtual environment
