@@ -187,6 +187,7 @@
             } catch (error) {
                 document.getElementById('public-key-display').textContent = 
                     'Error loading public key. Please try again later.';
+                console.log('Error loading public key. Please try again later.')
             }
         }
 
@@ -242,7 +243,7 @@
                 const dataUri = 'data:text/plain;charset=utf-8,' + encodeURIComponent(encryptedVote);
                 const a = document.createElement('a');
                 a.href = dataUri;
-                a.setAttribute('download', 'voted.txt');
+                a.setAttribute('download', 'vote.txt');
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);
@@ -293,6 +294,7 @@
             } catch (error) {
                 document.getElementById('result').textContent = 
                     'Error loading totals. Please try again later.';
+                console.log('Error loading totals. Please try again later.')
             }
         }
 
